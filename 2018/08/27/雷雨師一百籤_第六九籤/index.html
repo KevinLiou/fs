@@ -150,6 +150,15 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-124371143-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-124371143-1');
+</script>
+
 
 
 
@@ -252,14 +261,6 @@
     <a href="/categories/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-th"></i> <br />分類</a>
   </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-sitemap">
-    <a href="/sitemap.xml" rel="section">
-      <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />網站地圖</a>
-  </li>
 
       
       
@@ -343,7 +344,7 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="小舖店員">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="『籤詩小舖』提供籤詩資料瀏覽，包含最常見的雷雨師一百籤(台北行天宮)、六十甲子籤(主要見於媽祖廟、天公廟)、觀音一百籤…等等。">
       <meta itemprop="image" content="/uploads/avatar.png">
     </span>
 
@@ -412,6 +413,18 @@
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/08/27/雷雨師一百籤_第六九籤/#comments" itemprop="discussionUrl">
+                
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/08/27/雷雨師一百籤_第六九籤/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -545,6 +558,16 @@
           
 
   
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
 
 
 
@@ -586,7 +609,7 @@
                 alt="小舖店員" />
             
               <p class="site-author-name" itemprop="name">小舖店員</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <p class="site-description motion-element" itemprop="description">『籤詩小舖』提供籤詩資料瀏覽，包含最常見的雷雨師一百籤(台北行天宮)、六十甲子籤(主要見於媽祖廟、天公廟)、觀音一百籤…等等。</p>
           </div>
 
           
@@ -815,9 +838,44 @@
 
   
 
-
+  
+    <script id="dsq-count-scr" src="https://fskvsite.disqus.com/count.js" async></script>
+  
 
   
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'https://fortunesticks.info/2018/08/27/雷雨師一百籤_第六九籤/';
+        this.page.identifier = '2018/08/27/雷雨師一百籤_第六九籤/';
+        this.page.title = '雷雨師一百籤 第六九籤';
+        };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://fskvsite.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        $(function () {
+          var offsetTop = $('#comments').offset().top - $(window).height();
+          if (offsetTop <= 0) {
+            // load directly when there's no a scrollbar
+            loadComments();
+          } else {
+            $(window).on('scroll.disqus_scroll', function () {
+              var scrollTop = document.documentElement.scrollTop;
+              if (scrollTop >= offsetTop) {
+                $(window).off('.disqus_scroll');
+                loadComments();
+              }
+            });
+          }
+        });
+      
+    </script>
+  
+
+
 
 
 
